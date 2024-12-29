@@ -1,0 +1,26 @@
+﻿@model LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container-fluid">
+    <form method="post">
+        <div class="row">
+            <div class="mb-3 col-md-6">
+                <label asp-for="UserName" class="form-label">UserName</label>
+                <input asp-for="UserName" class="form-control" placeholder="Enter username" aria-describedby="UserName">
+                <span class="text-danger" asp-validation-for="UserName"></span>
+            </div>
+            <div class="mb-3 col-md-6">
+                <label asp-for="Password" class="form-label">Password</label>
+                <input asp-for="Password" class="form-control" placeholder="Enter password" aria-describedby="Password">
+                <span class="text-danger" asp-validation-for="Password"></span>
+            </div>
+        </div>       
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+</div>

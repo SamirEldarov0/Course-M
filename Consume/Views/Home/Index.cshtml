@@ -1,0 +1,20 @@
+﻿@model CategoryListViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    if (ViewBag.Error!=null)
+    {
+        <h1>@ViewBag.Error</h1>
+    }
+}
+<div class="text-center">
+    <ul>
+        @foreach (var item in Model.Data)
+        {
+            <li>@item.Name -@item.CourseCount</li>
+        }
+    </ul>
+</div>
